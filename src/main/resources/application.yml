@@ -3,6 +3,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/spring_batch
     username: root
-  batch:
-    initializer:
-      enabled: true
+#  batch:
+#    initializer:
+#      enabled: true
+#    table-prefix: hhaa

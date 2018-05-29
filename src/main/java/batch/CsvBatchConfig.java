@@ -81,32 +81,30 @@ public class CsvBatchConfig {
      * @return
      * @throws Exception
      */
-    @Bean
-    public JobRepository jobRepository(DataSource dataSource, PlatformTransactionManager transactionManager) throws Exception{
-
-        JobRepositoryFactoryBean jobRepositoryFactoryBean = new JobRepositoryFactoryBean();
-        jobRepositoryFactoryBean.setDataSource(dataSource);
-        jobRepositoryFactoryBean.setTransactionManager(transactionManager);
-        jobRepositoryFactoryBean.setDatabaseType(DatabaseType.MYSQL.name());
-
-        return jobRepositoryFactoryBean.getObject();
-    }
+//    @Bean
+//    public JobRepository jobRepository(DataSource dataSource, PlatformTransactionManager transactionManager) throws Exception{
+//
+//        JobRepositoryFactoryBean jobRepositoryFactoryBean = new JobRepositoryFactoryBean();
+//        jobRepositoryFactoryBean.setDataSource(dataSource);
+//        jobRepositoryFactoryBean.setTransactionManager(transactionManager);
+//        jobRepositoryFactoryBean.setDatabaseType(DatabaseType.MYSQL.name());
+//        return jobRepositoryFactoryBean.getObject();
+//    }
 
     /**
      * 作业调度器
-     * 
-     * @param dataSource
-     * @param transactionManager
      * @return
      * @throws Exception
      */
-    public SimpleJobLauncher jobLauncher(DataSource dataSource, PlatformTransactionManager transactionManager) throws Exception{
 
-        SimpleJobLauncher jobLauncher = new SimpleJobLauncher();
-        jobLauncher.setJobRepository(this.jobRepository(dataSource, transactionManager));
 
-        return jobLauncher;
-    }
+//    public SimpleJobLauncher jobLauncher(DataSource dataSource, PlatformTransactionManager transactionManager) throws Exception{
+//
+//        SimpleJobLauncher jobLauncher = new SimpleJobLauncher();
+//        jobLauncher.setJobRepository(this.jobRepository(dataSource, transactionManager));
+//
+//        return jobLauncher;
+//    }
 
 
     @Bean
